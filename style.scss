@@ -1,0 +1,1239 @@
+// 共通
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: "Times New Roman", "游明朝", "Yu Mincho ", "游明朝体", "YuMincho Medium", "ヒラギノ明朝 Pro W3", "Hiragino Mincho Pro", "HiraMinProN-W3", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", "Noto Serif JP", serif;
+    background: #fff;
+    line-height: 2.375;
+    font-size: 1.6rem;
+    color: #000;
+}
+#wrapper {
+    width:100%;
+    overflow-x: hidden !important;
+}
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    opacity: 0.6;
+}
+button:hover {
+    opacity: 0.6;
+}
+img {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+input,textarea,select{
+    border: 1px solid #E7E7E7;
+    height: 32px;
+    color: #707070;
+}
+// logo
+.el_logo {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+// btn
+.el_btn {
+    display: inline-block;
+    font-family: 'Noto Serif JP', serif;
+    background-color: #978F10;
+    padding: 16px 37px 16px 70px;
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: bold;
+    position: relative;
+    border: none;
+    cursor: pointer;
+}
+.el_btn::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background-image: url(img/calender.png);
+    position: absolute;
+    left: 37px;
+    top: 18px;
+}
+.el_btn-w {
+    display: inline-block;
+    font-family: 'Noto Serif JP', serif;
+    width: 200px;
+    height: 56px;
+    align-items: center;
+    font-size: 1.6rem;
+    position: relative;
+    border: 1px solid #707070;
+    text-align: center;
+    padding-top: 7px;
+    cursor: pointer;
+}
+.el_modal_btn {
+    width: 198px;
+    height: 42px;
+    margin: 0 auto;
+    border: 1px solid #707070;
+    background-color: #fff;
+    color: #000;
+}
+.el_modal_btn:hover {
+    opacity: 0.6;
+}
+// inner 
+.ly_inner {
+    max-width: 1180px;
+    margin: 0 auto;
+}
+// ttl
+.bl_ttl {
+    font-size: 3.6rem;
+}
+// index.html
+// ヘッダー
+.ly_header {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    &_inner {
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+    }
+}
+.bl_header {
+    &_logo-1{
+        position: relative;
+    }
+    &_ttl a {
+        font-size: 3.2rem;
+        font-weight: 700;
+        color: #fff;
+        letter-spacing: 0.8rem;
+    } 
+    &_menu {
+        display: flex;
+        align-items: center;
+    }
+    &_li a {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #fff;
+        letter-spacing: 0.1rem;
+    }
+    &_menu .bl_header_li:nth-of-type(2) {
+        margin: 0 33px;
+    }
+}
+.hp_header {
+    &_ttl {
+        margin-left: 15px;
+        margin-right: 120px;
+    }
+    &_btn {
+        margin-left: auto;
+    }
+}
+    // ハンバーガーメニュー
+.bl-hamburger-button,
+.bl-hamburger-button span {
+  display: inline-block;
+  transition: all .4s;
+  box-sizing: border-box;
+  z-index: 20;
+  display: none;
+}
+.bl-hamburger-button {
+    position: relative;
+    width: 30px;
+    height: 24px;
+    background: none;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+}
+.bl-hamburger-button span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #333333;
+    border-radius: 4px;
+}
+.bl-hamburger-button .color_w {
+    background-color: #fff;
+}
+.bl-hamburger-button span:nth-of-type(1) {
+    top: 0;
+}
+.bl-hamburger-button span:nth-of-type(2) {
+    top: 10px;
+}
+.bl-hamburger-button span:nth-of-type(3) {
+    bottom: 0;
+}
+.bl-hamburger-button.js-hamburger-open span:nth-of-type(1) {
+    transform: translateY(10px) rotate(-45deg);
+}
+.bl-hamburger-button.js-hamburger-open span:nth-of-type(2) {
+    opacity: 0;
+} 
+.bl-hamburger-button.js-hamburger-open span:nth-of-type(3) {
+    transform: translateY(-10px) rotate(45deg);
+}
+    // スクロールすると色変わる
+.ly_header.headerColorScroll {
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: 0.8s;
+}
+.bl_header_logo-1.headerColorScroll {
+    display: none;
+}
+.bl_header_logo-2 {
+    display: none;
+}
+.bl_header_logo-2.headerColorScroll {
+    display: block;
+}
+.bl_header_ttl.headerColorScroll a {
+    color: #000;
+}
+.bl_header_li.headerColorScroll a {
+    color: #000;
+}
+.bl-hamburger-button.headerColorScroll span {
+    background-color: #333333;
+}
+    // メニュー
+.bl-hamburger-menu {
+    width: 40%;
+    height: 100Vh;
+    background-color: #000;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    opacity: 0;
+    z-index: 15;
+}
+.bl-hamburger-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: calc((100vh - 148px)/ 2) 0;
+}
+.bl-hamburger-menu-li:not(:last-child) {
+    margin-bottom: 50px;
+}
+.bl-hamburger-menu.js-hamburger-open {
+    transform: translateX(0);
+    opacity: 0.9;
+    transition: transform 0.5s, opacity 0.5s;
+}
+.bl-hamburger-bg-w {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(251, 246, 246, 0.3);
+    z-index: 10;
+    visibility: hidden;
+}
+.bl-hamburger-bg-w.js-hamburger-open{
+    visibility: visible;
+}
+.bl-hamburger-menu-li a {
+    font-size: 2.0rem;
+    font-weight: bold;
+    color: #fff;
+}
+.js-hamburger-no-scroll {
+    overflow: hidden;
+}
+.bl-hamburger-button.js-hamburger-open span {
+    background-color: #fff;
+}
+.hp_font-size a {
+    font-size: 2.6rem;
+}
+// モーダル
+#modal-1 {
+    display: none;
+}
+#modal-1.is-open {
+    display: block;
+}
+.ly_modal {
+    &_overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 6;
+        background: rgba(255, 255, 255,0.16);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &_container {
+        position: relative;
+        overflow-y: auto;
+        z-index: 7;
+    }
+    &_inner{
+        padding: 20px 61px 90px 61px;
+        width: 500px;
+        border: 1px solid #707070;
+        background-color: #fff;
+    }
+    &_wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    &_btn {
+        margin-top: 60px;
+    }
+}
+.bl_modal {
+    &_ttl {
+        text-align: center;
+        font-size: 2.0rem;
+        border-bottom: 1px solid #E7E7E7;
+        padding-bottom: 10px;
+    }
+}
+.el_form {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 8x;
+}
+.modal-br {
+    font-size: 1.2rem;
+}
+// 閉じるボタン
+.bl_modal_down {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 2rem;
+    right: 2.2rem;
+    z-index: 3;
+    border: none;
+    background-color: #fff;
+}
+.bar {
+    display: block;
+    background-color: #070707;
+    height: 2px;
+    width: 1.8rem;
+    border-radius: 1px;
+}
+.bar_top {
+    transform: translateY(2px) rotate(45deg);
+    transition: opacity 0.3s;
+}
+.bar_mid {
+    opacity: 0;
+    transition: transform 0.3s;
+}
+.bar_bottom {
+    transform: translateY(-2px) rotate(-45deg);
+    transition: transform 0.3s;
+}
+// animation
+@keyframes mmfadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+@keyframes mmfadeOut {
+from {
+    opacity: 1;
+}
+to {
+    opacity: 0;
+}
+}
+@keyframes mmslideIn {
+from {
+    transform: translateY(10%);
+}
+to {
+    transform: translateY(0);
+}
+}
+@keyframes mmslideOut {
+from {
+    transform: translateY(0);
+}
+to {
+    transform: translateY(-10%);
+}
+}
+#modal-1[aria-hidden="false"] .ly_modal_overlay {
+    animation: mmfadeIn 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995);
+}
+#modal-1[aria-hidden="false"] .ly_modal_container {
+
+    animation: mmslideIn 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995);
+}
+#modal-1[aria-hidden="true"] .ly_modal_overlay {
+    animation: mmfadeOut 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995);
+}
+#modal-1[aria-hidden="true"] .ly_modal_container {
+    animation: mmslideOut 0.8s cubic-bezier(0.34, 0.07, 0.095, 0.995);
+  }
+
+
+// ファーストビュー 
+.ly_fv {
+    position: relative;
+    height: 100vh;
+}
+.ly_fv .swiper {
+    height: 100%;
+    
+}
+.ly_fv .swiper .slide-img {
+    height: 100%;
+}
+.ly_fv .swiper img {
+    height: 100%;
+    object-fit: cover;
+}
+.ly_fv .swiper .slide-img img {
+    display: block;  
+}
+.bl_fv_text {
+    position: absolute;
+    top: 22rem;
+    right: 25.5%;
+    z-index: 1;
+    color: #fff;
+    letter-spacing: 0.25em;
+    line-height: 7.9rem;
+    font-size: 3.4rem;
+    writing-mode: vertical-rl;
+} 
+  @keyframes zoomUp {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
+    }
+  }
+  
+  .ly_fv .swiper .swiper-slide-active .slide-img,
+  .ly_fv .swiper .swiper-slide-duplicate-active .slide-img,
+  .ly_fv .swiper .swiper-slide-prev .slide-img {
+    animation: zoomUp 10s linear 0s 1 normal both;
+  }
+// 説明セクション
+.ly_exp {
+    background-image: url(img/bg.png);
+    &_wrapper {
+        display: flex;
+        flex-direction: row-reverse;
+        &_text {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: 22%;
+            
+        }
+    }
+}
+.bl_exp {
+    &_ttl {
+        writing-mode: vertical-rl;
+        padding: 59px 101px 0 118px;
+        font-size: 2.8rem;
+        letter-spacing: 1.2rem;
+    }
+    &_text {
+        writing-mode: vertical-rl;
+        padding-top: 139px;
+        letter-spacing: 0.47rem;
+        text-orientation: upright;
+    }
+    &_name {
+        writing-mode: vertical-rl;
+        letter-spacing: 0.7rem;
+        font-size: 2.2rem;
+        margin-top: 420px;
+        margin-right: 300px;
+    }
+}
+.hp_exp {
+    &_ttl {
+        padding: 80px 0 139px 0;
+    }
+
+}
+// メニューセクション
+.ly_nav {
+    &_inner {
+        padding: 107px 0 78px 0;
+    }
+}
+.bl_nav {
+
+    &_menu {
+        display: flex;
+        flex-direction: column;
+        gap: 122px;
+    }
+    &_li {
+        display: flex;
+        
+        &_img {
+            max-width: 54.7%;
+            max-height: 54.5rem;
+        }
+        &_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        &_text-area  {
+            padding-left: 7vw;
+        }    
+        &_ttl {
+            font-size: 3.6rem;
+            line-height: 1.7;
+        }
+        &_text {
+            font-size: 1.6rem;
+            letter-spacing: -0.2rem;
+            line-height: 1.7;
+        }
+    }
+}
+.hp_nav_li {
+    flex-direction: row-reverse;
+
+    &_text {
+        padding: 67px 0 73px 0;
+    }
+    &_text-area {
+        padding-left: 0;
+        padding-right: 11vw;
+    }
+}
+// おすすめセクション
+.ly_re {
+    background: url(img/bg02.png) center center/cover no-repeat;
+    &_inner {
+        padding: 60px 0 142px 0;
+    }
+    &_wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 45px;
+    } 
+    &_card {
+        width: 27.707%;
+
+    } 
+} 
+.bl_re {
+    &_card_text {
+        font-size: 2.0rem;
+        line-height: 1.5;
+        &-sab {
+            font-size: 1.6rem;
+            line-height: 1.7;
+        }
+    }
+    
+}
+.hp_logo {
+    text-align: center;
+}
+.hp_ttl {
+    text-align: center;
+}
+.hp_re_card_text {
+    padding: 18px 0 20px 0;
+}
+// お知らせセクション
+.ly_news {
+    &_inner {
+        padding: 60px 0;
+    }
+}
+.bl_news {
+    &_menu-tab {
+        display: flex;
+        justify-content: center;
+        gap: 53px;
+    }
+    &_menu {
+        padding-top: 47px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px 56px;
+        justify-content: space-between;
+    }
+    &_li {
+        background-color: #F6F6F6;
+        display: flex;
+        width: 47%;
+        padding: 10px 15px 0 15px;
+
+        &_card {
+            width: 100px;
+        }
+        &_img  img {
+            aspect-ratio: 1/1;
+        }
+        &_content {
+            padding-left: 30px;
+        }
+        &_time {
+            font-size: 1.4rem;
+        }
+        &_text {
+            line-height: 1.7;
+        }
+    }
+}
+     //タブメニュー
+.bl_news_menu-tab li .active {
+    text-decoration: underline;
+}
+.bl_news_menu {
+    display: none;
+}
+.bl_news_menu.active {
+    display: flex;
+    animation: key-tab 3s linear 0s 1 normal both;
+}
+
+@keyframes key-tab {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+// アクセスセクション
+.ly_way {
+    background-image: url(img/bg.png);
+    &_inner {
+        padding: 60px 0 110px 0;
+    }
+    &_wrapper {
+        padding-top: 65px;
+        display: flex;
+        gap: 83px;
+    }
+}
+.bl_way {
+    &_img {
+        max-width: 65.6rem;
+        max-height: 37rem;
+    }   
+    &_img img {
+        object-fit: cover;
+        height: 100%;
+    }
+    &_text {
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+    &_content {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5%;
+    }
+}
+.el_gmap {
+    text-align: center;
+    padding-top: 69px;
+}
+.el_gmap iframe {
+    max-width: 100%;
+}
+// フッター
+.ly_footer {
+    background-image: url(img/bg3.png);
+    &_inner {
+        padding: 0 0 59px 0;
+    }
+    &_content {
+        padding-top: 65px;
+    }
+}
+.bl_footer {
+    &_menu {
+        writing-mode: vertical-rl;
+        margin: 0 auto;
+    }
+    &_li a {
+        font-size: 1.8rem;
+        letter-spacing: 1.2rem;
+    }
+    &_content {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    &_text-sab span {
+        letter-spacing: 0.24rem;
+    }
+}
+.hp_footer_menu {
+    padding: 61px 0 93px 0;
+}
+.hp_size {
+    letter-spacing: 0.8rem;
+}
+// コピーライト
+.ly_copy {
+    background-color: #000;
+}
+.bl_copy {
+    color: #fff;
+    text-align: center;
+}
+// Js_fade
+.js_fade {
+    opacity: 0;
+}
+.inview {
+    animation: key-fade 3s both;
+
+}
+@keyframes key-fade {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    50% {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateY(0);
+    }
+}
+// メディアクエリ
+@media (max-width: 1199px) {
+    .ly_inner {
+        max-width: 1000px;
+    }
+}
+@media (max-width: 1080px) {
+    .ly_exp_wrapper {
+        &_text {
+            gap: 13%;
+        }
+    }
+    .bl_exp {
+        &_ttl {
+            padding: 59px 101px 0 20px;
+        }
+        &_name {
+            margin-right: 130px;
+        }
+    }
+    .bl_nav_li {
+        &_text-area {
+            padding-left: 2vw; 
+        }
+    }
+    .hp_nav_li_text-area {
+        padding-left: 0;
+        padding-right: 8vw;
+    }
+}
+@media (max-width: 1000px) {
+    .ly_inner {
+        margin: 0 30px;
+    }
+    .bl_exp {
+        &_ttl {
+            padding: 59px 29px 0 35px;
+        }
+    }
+    .bl_news {
+        &_menu {
+            flex-direction: column;
+        }
+        &_li {
+            width: 100%;
+        }
+    }
+    .ly_way_wrapper {
+        gap: 20px;
+    }
+}
+@media (min-width: 769px) {
+    .br_sab {
+        display: none;
+    }
+}
+@media (max-width: 768px) {
+    .ly_inner {
+        width: 96%;
+        margin: 0 auto;
+    }
+    // ボタン
+    .el_btn {
+        padding: 10px 10px 10px 40px;
+    }
+    .el_btn::before {
+        left: 12px;
+        top: 12px;
+    }
+    .el_btn-w {
+        color: #fff;
+        text-shadow: 2px 2px 2px black;
+        border: 1px solid #fff;
+    }
+    // ヘッダー
+    .bl_header {
+        &_menu {
+            display: none;
+        }
+    }
+    .hp_header {
+        &_ttl {
+            margin-right: 0;
+        }
+    }
+    .hp_header_btn-sab {
+        margin-right: 18px;
+        margin-top: 5px;
+    }
+    // ハンバーガーメニュー
+    .bl-hamburger-button,
+    .bl-hamburger-button span {
+      display: block;
+    }
+    // モーダル
+    .ly_modal {
+        &_inner {
+            padding: 15px 20px 50px 20px;
+            width: 100%;
+        }
+    }
+    // 説明セクション
+    .ly_exp {
+        &_wrapper {
+            display: block;
+            &_text {
+                display: block;
+            }
+        }
+    }
+    .bl_exp {
+        &_ttl {
+            writing-mode: horizontal-tb;
+            padding: 59px 0 0 10px;
+        }
+        &_text {
+            writing-mode: horizontal-tb;
+            padding-top: 25px;
+            padding-left: 25px;
+        }
+        &_name {
+            writing-mode: horizontal-tb;
+            margin-top: 20px;
+            margin-right: 0;
+            text-align: right;
+        }
+    }    
+    // メニューセクション
+    .ly_nav {
+        &_inner {
+            padding: 78px 0 78px 0;
+        }
+    }
+    .bl_nav {
+        &_menu {
+            gap: 45px;
+        }
+        &_li {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            &_img {
+                max-width: 100%;
+                max-height: 100%;
+                height: 50rem;
+            }
+            &_text-area  {
+                padding-top: 7vh;
+                padding-left: 7vw;
+                position: absolute;
+            }    
+            &_ttl {
+                font-size: 2.4rem;
+                color: #fff;
+                text-shadow: 2px 2px 2px black;
+            }
+            &_text {
+                font-size: 1.6rem;
+                line-height: 1.7;
+                color: #fff;
+                text-shadow: 2px 2px 2px black;
+            }
+        }
+    }
+    .hp_nav_li {
+    
+        &_text {
+            padding: 30px 0 40px 0;
+        }
+        &_text-area {
+            padding-left: 7vw;
+            padding-right: 11vw;
+        }
+    }
+    // おすすめセクション
+    .ly_re {
+        &_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        } 
+        &_card {
+            width: 100%;
+        } 
+    }
+    .hp_br {
+        display: none;
+    }
+    // アクセスセクション
+    .ly_way {
+        &_wrapper {
+            flex-direction: column;
+            gap: 5vh;
+        }
+    }
+    // br
+    .br_sab {
+        display: block;
+    }
+}
+@media (max-width: 470px) {
+    .ly_inner {
+        width: 96%;
+        margin: 0 auto;
+    }
+     // ヘッダー
+     .bl_header {
+        &_logo-1 {
+            width: 30px;
+            height: 30px;
+            margin-bottom: 10px;
+        }
+        &_ttl {
+            padding-top: 10px;
+        }
+        &_ttl a {
+            font-size: 2.0rem;
+            letter-spacing: 0.1rem;
+        }
+    }
+    .hp_header {
+        &_ttl {
+            margin-left: 3px;
+            margin-right: 0;
+        }
+    }
+    .hp_header_btn-sab {
+        margin-right: 18px;
+    }
+}
+// お部屋.html
+// ヘッダー2
+.hp_header-2 {
+    background-color: #fff;
+    z-index: 5;
+    &_ttl a {
+        color: #000;
+    }
+    &_li a {
+        color: #000;
+    }
+}
+// ファーストビュー2
+.ly_fv-2 {
+    position: relative;
+    padding-top: 80px;
+}
+.ly_fv_img {
+    height: 500px;
+    max-width: 100%;
+    max-height: 100%;
+    & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.bl_fv-2_text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 3.4rem;
+    font-weight: bold;
+    color: #fff;  
+}
+.hp_fv-2 {
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    &_inner {
+        display: flex;
+    }
+}
+// メイン　
+.breadcrumb {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .breadcrumb li {
+    display: inline;/*横に並ぶように*/
+    list-style: none;
+  }
+  
+  .breadcrumb li:after {/* >を表示*/
+    content: '>';
+    padding: 0 0.2em;
+    color: #555;
+  }
+  
+  .breadcrumb li:last-child:after {
+    content: '';
+  }
+  
+  .breadcrumb li a {
+    text-decoration: none;
+    color: #000;/*色*/
+  }
+  
+  .breadcrumb li a:hover {
+    text-decoration: underline;
+  }
+.ly_main {
+    &_inner {
+        padding: 30px 0 150px 0;
+    }
+    &_menu {
+        display: flex;
+        flex-direction: column;
+        gap: 141px;
+    }
+}
+.bl_main {
+    &_ttl {
+        text-align: center;
+        padding: 93px 0 76px 0;
+    }
+    &_li {
+        display: flex;
+         &_img {
+            align-self: flex-start;
+            width: 45%; 
+            z-index: 5;
+        }
+        &_img img {
+            width: 100%; 
+            height: auto;
+            aspect-ratio: 16/9;
+        }   
+        &_content {
+            background-image: url(img/bg.png);
+            align-self: flex-end;
+            width: calc(55% + 175px);
+            margin-left: -175px;
+            transform: translate(0,57px);
+            padding: 55px 0 108px 244px;
+        }
+        &_ttl {
+            font-size: 2.4rem;   
+        }
+        &_text {
+            padding: 46px 0;
+            line-height: 1.7;
+        }
+        &_at {
+            font-size: 1.4rem;
+            margin-bottom: -14px;
+            letter-spacing: -0.03rem;
+        }
+       
+    }
+
+
+}
+.hp_main {
+    &_li {
+        flex-direction: row-reverse;
+        &_content {
+            margin-left: 0;
+            margin-right: -175px;
+            padding: 55px 0 108px 60px;
+        }
+    }
+}
+@media (max-width: 1000px) {
+    .bl_main_li_content {
+        padding: 55px 0 108px 190px;
+    }
+    .hp_main_li_content {
+        padding: 55px 0 108px 60px;
+    }
+}
+@media (max-width: 768px) {
+    .ly_main {
+        &_inner {
+            padding-bottom: 120px;
+        }
+        &_menu {
+            gap: 60px;
+        }
+    }
+    .bl_main {
+        &_li {
+            flex-direction: column;
+            &_img {
+                max-width: 100%;
+                width: 100%;
+            }
+            &_img img {
+                max-height: 30rem;
+                object-fit: cover;
+            }
+            &_content {
+                width: 100%;
+                padding: 55px 0 108px 20px;
+                transform: translate(0);
+            }
+        }
+    }
+    .bl_main_li_content.hp_main_li_content {
+        transform: translateX(-175px);
+    }
+}
+@media (max-width: 399px) {
+    
+}
+@media (max-width: 320px) {
+    
+}
+// お料理
+.hp_fv-3 {
+    background-image: url(img/menu-header.jpg);
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    &_inner {
+        display: flex;
+    }
+}
+// 温泉
+.hp_fv-4 {
+    background-image: url(img/onsen-header.jpg);
+    height: 50vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    &_inner {
+        display: flex;
+    }
+}
+.ly_effect {
+    padding: 75px 0 74px 0;
+    margin-top: 200px;
+    border-top: 1px solid #E7E7E7;
+    border-bottom: 1px solid #E7E7E7;
+    &_wrapper {
+        padding: 47px 150px 0 150px;
+    }
+}
+.bl_effect {
+    &_ttl  {
+        font-size: 2.6rem;
+        text-align: center;
+    }
+    &_content {
+        display: flex;
+        padding: 14.5px 0 15px 0;
+        border-top: 1px solid #E7E7E7;
+    }
+    &_content:nth-of-type(3) {
+        border-bottom: 1px solid #E7E7E7;
+    }
+    &_content_ttl {
+        white-space: nowrap;
+        margin-right: 180px;
+    }
+}
+.hp_inner {
+    padding-bottom: 96px;
+}
+.hp_effect_content_ttl {
+    margin-right: 150px;
+}
+
+// メディアクエリ
+@media (max-width: 1000px) {
+
+}
+@media (max-width: 768px) {
+    .ly_effect {
+        margin-top: 100px;
+        &_wrapper  {
+            padding: 27px 30px 0 30px;
+        }
+    }
+    .bl_effect {
+        &_content_ttl {
+            margin-right: 80px;
+        }
+    }
+    .hp_effect_content_ttl {
+        margin-right: 50px;
+}
+}
+
+@media (max-width: 399px) {
+    
+}
+@media (max-width: 320px) {
+    
+}
